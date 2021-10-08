@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head section -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="app.js" type="text/javascript"></script>
+        <title>Weather Journal</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- headline section -->
+
+            <div class ="holder headline">
+                <h2>Weather Journal App</h2>
+            </div>
+
+            <!-- entry section -->
+            
+            <form action="/dataEntry" method="post" id="entryForm">
+                <input type="text" name="date" hidden id="dateInput" style="display: none;">
+                <input type="text" name="temp" hidden id="tempInput" style="display: none;">
+                <div class ="holder zip">
+                    <label for="zip">Enter Zipcode here</label>
+                    <input type="text" id="zip" name="zip" placeholder="enter zip code here">
+                </div>
+                <div class ="holder feel">
+                    <div>
+                        <label for="feelings">How are you feeling today?</label>
+                        <textarea class= "myInput" id="response" name="response" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
+                    </div>
+                </div>
+            </form>
+            
+            <!-- generate button -->
+
+            <button id="generate" type="button"> Generate </button>
+
+            <!-- last entry section -->
+
+            <div class ="holder entry">
+                <h2 class = "title" style="text-align: center;">Most Recent Entry</h2>
+                <div id = "entryHolder">
+                    <h2 id = "date"></h2> 
+                    <h2 id = "temp"></h2>
+                    <h2 id = "content"></h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
